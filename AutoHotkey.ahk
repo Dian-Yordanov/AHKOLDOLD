@@ -166,6 +166,9 @@ sleep, 50
 SendInput {Tab}
 sleep, 10
 SendInput {enter}
+sleep, 1
+SendInput {LAlt Up}
+return
 
 ;loopIndexOfSeconds :=2
 ;Loop, %loopIndexOfSeconds%
@@ -175,10 +178,6 @@ SendInput {enter}
 ;	SendInput {Tab}
 ;	sleep, 1000
 ;        }
-
-sleep, 1
-SendInput {LAlt Up}
-return
 
 
 SecondsLeftLaunchForkChange(intForSeconds)
@@ -1554,6 +1553,7 @@ Gui, Add, Text, xm cWhite gYhs,Yhs
 Gui, Add, Text, xm cWhite gXyidA,XyidA   |
 Gui, Add, Text, %k_Position% cWhite gappZ,|   appZ
 Gui, Add, Text, xm cWhite goldmX,oldmX
+Gui, Add, Text, xm cWhite grss,rss
 OnMessage(0x200, "Help")
 Gui, Color, 000000, FFFFFF
 xpos := xpos
@@ -3030,6 +3030,12 @@ return
 newsZ:
 WinActivate ahk_id %previous_ID%
 tag:="newsZ"
+idXTagingFusion(tag)
+return
+
+rss:
+WinActivate ahk_id %previous_ID%
+tag:="rss"
 idXTagingFusion(tag)
 return
 
