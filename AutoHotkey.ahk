@@ -1553,7 +1553,10 @@ Gui, Add, Text, xm cWhite gYhs,Yhs
 Gui, Add, Text, xm cWhite gXyidA,XyidA   |
 Gui, Add, Text, %k_Position% cWhite gappZ,|   appZ
 Gui, Add, Text, xm cWhite goldmX,oldmX
-Gui, Add, Text, xm cWhite grss,rss
+Gui, Add, Text, xm cGreen grss,rss
+Gui, Add, Text, xm cGreen gnameX,nameX   |
+Gui, Add, Text, %k_Position% cGreen grngX,|   rngX
+Gui, Add, Text, xm cGreen gpythonbot,pythonbot
 OnMessage(0x200, "Help")
 Gui, Color, 000000, FFFFFF
 xpos := xpos
@@ -3036,6 +3039,24 @@ return
 rss:
 WinActivate ahk_id %previous_ID%
 tag:="rss"
+idXTagingFusion(tag)
+return
+
+nameX:
+WinActivate ahk_id %previous_ID%
+tag:="nameX"
+idXTagingFusion(tag)
+return
+
+rngX:
+WinActivate ahk_id %previous_ID%
+tag:="rngX"
+idXTagingFusion(tag)
+return
+
+pythonbot:
+WinActivate ahk_id %previous_ID%
+tag:="python bot"
 idXTagingFusion(tag)
 return
 
