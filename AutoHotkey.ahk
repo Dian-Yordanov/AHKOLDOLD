@@ -12,9 +12,9 @@
 
 
 
-FileRead, Contents, C:\Users\ZallocWintendo\Documents\StringBank.txt
+FileRead, Contents, %A_ScriptDir%\StringBank.txt
 
-FileLocation = C:\Users\ZallocWintendo\Documents\StringBank.txt
+FileLocation = %A_ScriptDir%\StringBank.txt
 
 P0igzCZNwt9RilfEV = % getStringFromBank("hSniYw56tipgmni3", FileLocation)
 PG6v129mjWr390pBy = % getStringFromBank("E5jW6hciEBs1uH1C", FileLocation)
@@ -1511,8 +1511,6 @@ Gui, Add, Button, %k_Position% gfzpoezpass9,%Eu0PrIiaiNXlHHiXP%
 Gui, Add, Button, %k_Position% gfzpoezpass10,%EScir7EGisf8pkrii%
 Gui, Add, Button, %k_Position% gfzpoezpass11,%EoQKiiJjR57Iiirr7%
 
-
-
 Gui, Add, Edit, xm w60 ReadOnly, Poe2
 Gui, Add, Button, %k_Position% gfzpoezpass12,%EiAa70s4Ai4i4I5ig%
 Gui, Add, Button, %k_Position% gfzpoezpass13,%Efi3iin1iO5hIJsxp%
@@ -1535,6 +1533,10 @@ Gui, Add, Button, %k_Position% gOpenWebClipy,OpenWebClipy
 Gui, Add, Edit, xm w60 ReadOnly, Rainlander
 Gui, Add, Button, %k_Position% gSaveToRainlanderFromHelpy,SaveToRainlanderFromHelpy
 Gui, Add, Button, %k_Position% gChangeRainlanderSizeStartingAt500,ChangeRainlanderSizeStartingAt500
+
+Gui, Add, Edit, xm w60 ReadOnly, Sound
+Gui, Add, Button, %k_Position% gNumpadUpHelpy,100-100
+Gui, Add, Button, %k_Position% gNumpadPgUpHelpy,100-0
 
 Gui, Add, Text,xm cBlack,_____aaa_______
 Gui, Add, Text, xm cWhite gideaX,ideaX   |
@@ -1666,6 +1668,18 @@ return
 TEST:
 WinActivate ahk_id %previous_ID%
 SendInput %PG6v129mjWr390pBy%
+return
+
+NumpadUpHelpy:
+splashy("setSoundTo100")
+setSoundTo100()
+Gosub, shiftyUp 
+return
+
+NumpadPgUpHelpy:
+splashy("setSoundTo0")
+setSoundTo0()
+Gosub, shiftyUp 
 return
 
 Search:
