@@ -1673,13 +1673,13 @@ return
 NumpadUpHelpy:
 splashy("setSoundTo100")
 setSoundTo100()
-Gosub, shiftyUp 
+;Gosub, shiftyUp 
 return
 
 NumpadPgUpHelpy:
 splashy("setSoundTo0")
 setSoundTo0()
-Gosub, shiftyUp 
+;Gosub, shiftyUp 
 return
 
 Search:
